@@ -3,9 +3,11 @@ package com.atguigu.cloud.serivce;
 import org.apache.ibatis.annotations.Param;
 
 /**
- * @auther zzyy
- * @create 2024-01-06 16:15
- */
+ * @FileName AccountService
+ * @Description
+ * @Author mark
+ * @date 2024-07-05
+ **/
 public interface AccountService {
 
     /**

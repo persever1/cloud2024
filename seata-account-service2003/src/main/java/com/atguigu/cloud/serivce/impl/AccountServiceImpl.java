@@ -8,11 +8,13 @@ import org.springframework.stereotype.Service;
 
 import java.util.concurrent.TimeUnit;
 
-/**
- * @auther zzyy
- * @create 2024-01-06 16:15
- */
 
+/**
+ * @FileName AccountServiceImpl
+ * @Description
+ * @Author mark
+ * @date 2024-07-05
+ **/
 @Service
 @Slf4j
 public class AccountServiceImpl implements AccountService

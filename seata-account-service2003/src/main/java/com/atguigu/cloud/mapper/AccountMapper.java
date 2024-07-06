@@ -5,9 +5,11 @@ import org.apache.ibatis.annotations.Param;
 import tk.mybatis.mapper.common.Mapper;
 
 /**
- * @auther zzyy
- * @create 2024-01-06 16:14
- */
+ * @FileName AccountMapper
+ * @Description
+ * @Author mark
+ * @date 2024-07-05
+ **/
 
 public interface AccountMapper extends Mapper<Account>
 {

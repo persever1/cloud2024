@@ -8,9 +8,11 @@ import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
 /**
- * @auther zzyy
- * @create 2024-01-06 16:16
- */
+ * @FileName AccountController
+ * @Description
+ * @Author mark
+ * @date 2024-07-05
+ **/
 @RestController
 public class AccountController {
 

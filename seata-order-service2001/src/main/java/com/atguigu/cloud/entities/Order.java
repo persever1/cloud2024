@@ -6,8 +6,11 @@ import javax.persistence.*;
 import java.io.Serializable;
 
 /**
- * 表名：t_order
-*/
+ * @FileName OrderController
+ * @Description 表名：t_order
+ * @Author mark
+ * @date 2024-07-05
+ **/
 @Table(name = "t_order")
 @ToString
 public class Order implements Serializable

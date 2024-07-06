@@ -9,9 +9,11 @@ import javax.persistence.Table;
 import java.io.Serializable;
 
 /**
- * @auther zzyy
- * @create 2024-01-06 16:13
- */
+ * @FileName Account
+ * @Description 表名：t_account
+ * @Author mark
+ * @date 2024-07-05
+ **/
 @Table(name = "t_account")
 @ToString
 public class Account implements Serializable

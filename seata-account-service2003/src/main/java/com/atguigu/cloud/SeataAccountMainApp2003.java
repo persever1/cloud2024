@@ -7,9 +7,11 @@ import org.springframework.cloud.openfeign.EnableFeignClients;
 import tk.mybatis.spring.annotation.MapperScan;
 
 /**
- * @auther zzyy
- * @create 2024-01-06 16:11
- */
+ * @FileName SeataAccountMainApp2003
+ * @Description
+ * @Author mark
+ * @date 2024-07-05
+ **/
 @EnableDiscoveryClient
 @EnableFeignClients
 @MapperScan("com.atguigu.cloud.mapper") //import tk.mybatis.spring.annotation.MapperScan;
