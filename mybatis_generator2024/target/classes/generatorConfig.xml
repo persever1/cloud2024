@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- 定义 MyBatis Generator 配置文件的DOCTYPE -->
+<!DOCTYPE generatorConfiguration
+        PUBLIC "-//mybatis.org//DTD MyBatis Generator Configuration 1.0//EN"
+        "http://mybatis.org/dtd/mybatis-generator-config_1_0.dtd">
+
+
+<!-- 配置生成器的配置文件 -->
+<generatorConfiguration>
+    <!-- 加载外部属性文件 -->
+    <properties resource="config.properties"/>
+
+    <!-- 定义生成配置的上下文 -->
+    <context id="Mysql" targetRuntime="MyBatis3Simple" defaultModelType="flat">
+        <!-- 定义数据库表字段的起始和结束符 -->
+        <property name="beginningDelimiter" value="`"/>
+        <property name="endingDelimiter" value="`"/>
+
+        <!-- 配置插件，启用tk.mybatis.mapper的通用Mapper -->
+        <plugin type="tk.mybatis.mapper.generator.MapperPlugin">
+            <property name="mappers" value="tk.mybatis.mapper.common.Mapper"/>
+            <property name="caseSensitive" value="true"/>
+        </plugin>
+
+        <!-- 配置数据库连接信息 -->
+        <jdbcConnection driverClass="${jdbc.driverClass}"
+                        connectionURL="${jdbc.url}"
+                        userId="${jdbc.user}"
+                        password="${jdbc.password}">
+        </jdbcConnection>
+
+        <!-- 配置生成实体类的位置和包名 -->
+        <javaModelGenerator targetPackage="${package.name}.entities" targetProject="src/main/java"/>
+
+        <!-- 配置生成SQL映射文件的位置和包名 -->
+        <sqlMapGenerator targetPackage="${package.name}.mapper" targetProject="src/main/java"/>
+
+        <!-- 配置生成Mapper接口的位置和包名 -->
+        <javaClientGenerator targetPackage="${package.name}.mapper" targetProject="src/main/java" type="XMLMAPPER"/>
+
+        <!-- 配置需要生成的表及其相关信息 -->
+        <table tableName="t_pay" domainObjectName="Pay">
+            <!-- 配置自增主键 -->
+            <generatedKey column="id" sqlStatement="JDBC"/>
+        </table>
+    </context>
+</generatorConfiguration>
+
+

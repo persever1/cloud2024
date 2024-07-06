@@ -1,0 +1,19 @@
+# 配置应用的基本信息
+spring:
+  application:
+    name: cloud-payment-service  # 应用名称
+    # 下面开始配置Spring Cloud Consul用于服务发现
+  cloud:
+    consul:
+      host: localhost  # Consul服务器的主机名或IP地址
+      port: 8500  # Consul服务器的端口
+      discovery:
+        service-name: ${spring.application.name}  # 注册到Consul的服务名称，使用应用名称
+      config:  # 配置Consul的配置管理
+        profile-separator: '-'  # 配置文件名称中profile的分隔符，默认是","，这里更新为"-"
+        format: YAML  # 配置格式，这里使用YAML格式
+
+  # config/cloud-payment-service/data
+  #       /cloud-payment-service-dev/data
+  #       /cloud-payment-service-prod/data
+

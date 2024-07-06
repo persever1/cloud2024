@@ -1,0 +1,36 @@
+# 配置服务器端口
+server:
+  port: 8002
+    # 该配置指定服务器监听的端口号为8002
+
+
+# ==========applicationName + druid-mysql8 driver===================
+# 配置Spring数据源
+spring:
+  datasource:
+    # 数据源类型为Druid连接池
+    type: com.alibaba.druid.pool.DruidDataSource
+    # 指定MySQL驱动类名
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    # 数据库连接URL，这里配置的是本地MySQL数据库
+    url: jdbc:mysql://localhost:3306/db2024?characterEncoding=utf8&useSSL=false&serverTimezone=GMT%2B8&rewriteBatchedStatements=true&allowPublicKeyRetrieval=true
+    # 数据库用户名
+    username: root
+    # 数据库密码
+    password: admin
+  # 多环境配置，这里指定了当前激活的环境为'dev'
+  profiles:
+    active: dev
+
+
+# ========================mybatis===================
+# MyBatis配置
+mybatis:
+  # 指定mapper文件的位置
+  mapper-locations: classpath:mapper/*.xml
+  # 指定实体类的别名包
+  type-aliases-package: com.atguigu.cloud.entities
+  # 配置MyBatis的详细行为
+  configuration:
+    # 开启下划线到驼峰命名的映射
+    map-underscore-to-camel-case: true
